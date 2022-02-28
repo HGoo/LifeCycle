@@ -70,7 +70,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="HrT-sp-T8B" kind="presentation" id="tVg-ed-Wh8"/>
+                                    <segue destination="HrT-sp-T8B" kind="show" id="tVg-ed-Wh8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -95,11 +95,11 @@
             <objects>
                 <viewController id="HrT-sp-T8B" customClass="ThirdViewController" customModule="LifeCycle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xjF-dp-Abh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pL7-i1-TaY">
-                                <rect key="frame" x="110.5" y="297.5" width="154.5" height="52"/>
+                                <rect key="frame" x="110.5" y="307.5" width="154.5" height="52"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
@@ -114,6 +114,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="closeVC" destination="HrT-sp-T8B" eventType="touchUpInside" id="QbE-Ve-uoC"/>
+                                    <segue destination="e3J-hW-JhF" kind="unwind" unwindAction="unwindFor:" id="HgA-4z-sP2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -127,6 +128,7 @@
                     <navigationItem key="navigationItem" id="l7l-6y-fC3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0dS-WU-Yfw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="e3J-hW-JhF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2113" y="78"/>
         </scene>
