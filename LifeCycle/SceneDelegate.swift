@@ -13,9 +13,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        print(#function)
+        //window?.rootViewController = UINavigationController(rootViewController: RootViewController())
+        window?.tintColor = .red
+        UINavigationBar.appearance().barTintColor = .green
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
@@ -30,23 +32,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
     }
-
+    //Вызывается перед переходом в состояние в фоновый режим
     func sceneWillResignActive(_ scene: UIScene) {
-        // Called when the scene will move from an active state to an inactive state.
-        // This may occur due to temporary interruptions (ex. an incoming phone call).
+        print(#function)
     }
-
-    func sceneWillEnterForeground(_ scene: UIScene) {
-        // Called as the scene transitions from the background to the foreground.
-        // Use this method to undo the changes made on entering the background.
-    }
-
+    
+    //Вызывается при переходе в фоновый режим
     func sceneDidEnterBackground(_ scene: UIScene) {
-        // Called as the scene transitions from the foreground to the background.
-        // Use this method to save data, release shared resources, and store enough scene-specific state information
-        // to restore the scene back to its current state.
+        print(#function)
     }
 
+    //Вызывается перед переходом на Передний алан
+    func sceneWillEnterForeground(_ scene: UIScene) {
+        print(#function)
+    }
 
+    //Выполняется при переходе на апередний план
+    //sceneDidBecomeActive
+    
+    //Вызывается при завершении работы
+    func applicationWillTerminate(_ aplication: UIApplication) {
+        print(#function)
+    }
 }
 
